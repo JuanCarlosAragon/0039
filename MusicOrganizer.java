@@ -59,4 +59,13 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    
+    /**
+     * Comprueba que un determinado Indice esté dentro del ArrayList
+     */
+    public void checkIndex(int index){
+        if(files.size() < index){
+            System.out.println("El indice debe estar entre 0 y " + files.size());
+        }
+    }
 }
