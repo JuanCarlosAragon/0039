@@ -66,7 +66,18 @@ public class MusicOrganizer
     public void checkIndex(int index){
         if(files.size() < index){
             System.out.println("El indice debe estar entre 0 y " + files.size());
-            
         }
+    }
+    /**
+     * Devuelve true si el indice introducido como parametro se encuentra en el 
+     * Atributo Files.
+     */
+    public boolean validIndex(int index){
+        boolean isValid = false;
+        if((files.size() - 1) >= index){
+            isValid = true;
+        }
+        
+        return isValid;
     }
 }
