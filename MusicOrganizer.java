@@ -82,4 +82,24 @@ public class MusicOrganizer
         
         return isValid;
     }
+    /**
+     * Devuelve el indice del primer archivo que contiene un texto concreto
+     */
+     public int findFirst(String text){
+        int index = 0;
+        int count = -1;
+        boolean found = false;
+        while (!found && index < files.size()){
+            if (files.get(index).contains(text)){
+                found = true;
+                count = index;
+            }
+            else{
+                index = index + 1;
+                count = -1;
+            }
+        }
+        return count;
+    }
+    
 }
