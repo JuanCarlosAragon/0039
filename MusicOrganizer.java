@@ -89,7 +89,8 @@ public class MusicOrganizer
         int index = 0;
         int count = -1;
         boolean found = false;
-        while (!found && index < files.size()){
+        int size = files.size();
+        while (!found && index < size){
             if (files.get(index).contains(text)){
                 found = true;
                 count = index;
